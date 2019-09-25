@@ -1,0 +1,10 @@
+<ion-content>
+  <div class="container">
+    <ion-img class="bigode" src="../../assets/img/bigode.jpg"></ion-img>
+    <input [(ngModel)]="login.emailOrUsername" class="email" placeholder="Email ou username" />
+    <input [(ngModel)]="login.password" class="password" type="password" placeholder="Senha" />
+    <ion-button class="btn cadastro" fill="outline" color="secondary" routerLink="/subscribe">Cadastre-se</ion-button>
+    <ion-button class="btn entrar" (click)="enter()">Entrar</ion-button>
+    <ion-img class="logo" src="../../assets/img/logo.jpg"></ion-img>
+  </div>
+</ion-content>

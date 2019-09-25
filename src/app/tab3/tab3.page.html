@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Meu perfil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item class="item-photo-profile">
+      <ion-img class="photo-profile" src="./../../assets/img/bigode.jpg"></ion-img>
+      <ion-button class="btn change-photo" fill="outline" color="secondary" >Alterar foto
+      </ion-button>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label class="text-profile" color="secondary"><span class="bold-title">Nome: </span>{{ this.userCreate.user.user.name }}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label class="text-profile" color="secondary"><span class="bold-title">Username: </span>{{ this.userCreate.user.user.username }}</ion-label>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label class="text-profile" color="secondary"><span class="bold-title">Email: </span>{{ this.userCreate.user.user.email }}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button class="btn edit-profile" fill="outline" color="secondary" >Editar Perfil
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

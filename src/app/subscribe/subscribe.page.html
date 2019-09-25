@@ -1,0 +1,14 @@
+
+
+<ion-content>
+  <input [(ngModel)]="create.email" class="email" type="email" placeholder="Email" />
+  <input [(ngModel)]="create.username" class="username" placeholder="Username" />
+  <input [(ngModel)]="create.name" class="name" placeholder="Nome" />
+  <input [(ngModel)]="create.password" class="password" type="password" placeholder="Senha" />
+  <input [(ngModel)]="create.passwordConfirm" class="passwordConfirm" type="password" placeholder="Confirmar senha" />
+  <ion-item class="date">
+    <ion-label>Data de nascimento</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY"  [(ngModel)]="create.birthday" ></ion-datetime>
+  </ion-item>
+  <ion-button class="btn" (click)="subscribe()">Cadastrar</ion-button>
+</ion-content>

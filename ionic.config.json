@@ -1,0 +1,7 @@
+{
+  "name": "Meu_Cabelo",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
