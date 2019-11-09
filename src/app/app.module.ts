@@ -9,9 +9,14 @@ import { AdMobFree} from '@ionic-native/admob-free/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { environment } from 'src/environments/environment';
+import { Camera } from '@ionic-native/camera/ngx';
+import { File } from '@ionic-native/file/ngx';
+import { AngularFireStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +25,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule
   ],
   providers: [
     StatusBar,
@@ -29,7 +36,10 @@ import { AppComponent } from './app.component';
     AuthService,
     CreateService,
     LocalstorageService,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Camera,
+    File,
+    AngularFireStorage 
   ],
   bootstrap: [AppComponent]
 })
